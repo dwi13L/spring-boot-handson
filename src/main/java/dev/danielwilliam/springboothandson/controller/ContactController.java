@@ -27,15 +27,16 @@ public class ContactController {
         this.contactService = contactService;
     }
 
-    @PostMapping("/contact")
-    public ResponseEntity<Contact> createContact(@Valid @RequestBody Contact contact) {
-
-        return new ResponseEntity<Contact>(contactService.createContact(contact), HttpStatus.CREATED);
-    }
-
     /**
      * API End Points
      */
+
+    @PostMapping("/contact")
+    public ResponseEntity<Contact> createContact(@Valid @RequestBody Contact contact) throws Exception {
+
+        return new ResponseEntity<Contact>(contactService.createContact(contact),
+                HttpStatus.CREATED);
+    }
 
     @DeleteMapping("contact/{id}")
     public ResponseEntity<HttpStatus> deleteContact(@PathVariable("id") long id) {
