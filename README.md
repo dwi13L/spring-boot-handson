@@ -10,4 +10,4 @@
 - Creation of REST APIs using Spring Web
 - Validation of incoming data
 - Performing CRUD operations on database using Spring Data
-- Handling Exceptions globally using
+- Handling Exceptions globally using Controller Advice
